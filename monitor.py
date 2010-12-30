@@ -22,7 +22,10 @@
 
 import imp
 import os
-import queue
+try:
+    import queue # Python 3.0++
+except:
+    import Queue as queue # Python 2.6
 import reloader
 import sys
 import threading
