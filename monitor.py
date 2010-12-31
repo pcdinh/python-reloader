@@ -102,7 +102,4 @@ class Reloader(object):
                 if getattr(m, '__file__', None) in filenames]
 
         for mod in modules:
-            if mod.__name__ == '__main__':
-                # we cannot reload(__main__)
-                continue
             reloader.reload(mod)
